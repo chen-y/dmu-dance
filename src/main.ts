@@ -106,6 +106,11 @@ const vm = new Vue({
         } else {
           node.dom.classList.add('add-bg');
         }
+
+        const popupContent = document.createElement('span');
+        popupContent.style.color = 'white';
+        popupContent.textContent = '一键三连';
+        node.addPopupContent(popupContent);
       },
     });
     this.dmInstance.pool = testTexts;

@@ -133,6 +133,13 @@ export class DNode implements DNodeProps {
     }
   }
 
+  addPopupContent(node: HTMLElement) {
+    const popup = this.dom.querySelector('.dm-node-popup');
+    if (popup) {
+      popup.appendChild(node);
+    }
+  }
+
   setSpeed({x, y}: { x: number; y: number }): void {
     const sX = x ?? this.speedX;
     const sY = y ?? this.speedY;

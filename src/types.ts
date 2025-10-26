@@ -49,6 +49,7 @@ export interface DNodeProps extends NodeLifecycleMap {
   createDom: () => SVGElement | HTMLElement;
   addPrefixContent(prefix: HTMLElement): void;
   addSuffixContent(suffix: HTMLElement): void;
+  addPopupContent(node: HTMLElement): void;
   destroy(): void;
 }
 
