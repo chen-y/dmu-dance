@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DMDance</title>
+  <!-- <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.5.20/vue.cjs.min.js"></script> -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div id="side">
+      <form>
+        <div>
+          <div class="form-item-title">选择模式：</div>
+          <template v-for="(item, index) in modes">
+            <label>
+              <input type="radio" :value.number="index" :checked="index === mode" @change="onModeChange" name="mode" />
+              <span>{{ item.value }}</span>
+            </label>
+          </template>
+        </div>
+        <div>
+          <div class="form-item-title">前缀内容：</div>
+          <input class="form-item-input" type="text" v-model="prefix" name="prefix" />
+        </div>
+        <div>
+          <div class="form-item-title">后缀内容：</div>
+          <input class="form-item-input" type="text" v-model="suffix" name="suffix" />
+        </div>
+      </form>
+    </div>
+    <div id="main">
+      <div id="container"></div>
+      <div id="input-container">
+        <textarea id="input" placeholder="输入弹幕" v-on:keyup.enter="onInput"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

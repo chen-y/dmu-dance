@@ -1,0 +1,70 @@
+
+body {
+  margin: 0;
+}
+
+:root, body {
+  height: 100%;
+}
+
+#container {
+  position: relative;
+  /* width: 500px;
+  height: 300px; */
+  width: 100%;
+  margin: 0 auto;
+  /* border: 1px solid #000; */
+  overflow: hidden;
+}
+
+.add-border {
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 0 10px;
+}
+
+.add-bg {
+  background-color: red;
+}
+
+#app {
+  display: flex;
+  height: 100%;
+}
+
+#side {
+  width: 230px;
+  border-right: 1px solid #CCC;
+}
+
+#main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#container {
+  flex: 1;
+}
+#input-container {
+  border-top: 1px solid #CCC;
+  height: 200px;
+}
+
+#input {
+  width: 100%;
+  height: 100%;
+  resize: none;
+}
+
+.form-item-input {
+  width: 100%;
+  height: 30px;
+  padding: 0;
+  display: block;
+  box-sizing: border-box;
+}
+
+.form-item-title {
+  margin-top: 12px;
+}
