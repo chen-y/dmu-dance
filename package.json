@@ -1,15 +1,21 @@
 {
   "name": "dmu-dance",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "lib/index.js",
   "types": "./lib/index.d.ts",
+  "author": {
+    "name": "chen-y"
+  },
+  "keywords": ["弹幕", "danmu", "dm", "视频弹幕"],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lib:cli": "tsc src/index.ts --outDir lib --module esnext --declaration --emitDeclarationOnly"
+    "lib:js": "tsc src/index.ts --outDir lib --module esnext --declaration --emitDeclarationOnly",
+    "lib:css": "node build.js",
+    "prepublish": "lib:js && lib:css"
   },
   "devDependencies": {
     "typescript": "~5.9.3",

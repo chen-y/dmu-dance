@@ -1,0 +1,49 @@
+
+.dm-container {
+  position: absolute;
+  overflow: hidden;
+}
+
+.dm-node {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* background-color: red; */
+}
+
+.dm-node-text {
+  line-height: 22px;
+  flex: 1;
+  white-space: nowrap;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.dm-node-prefix {
+
+}
+
+.dm-node-suffix {
+
+}
+
+.dm-node-popup {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  background-color: #333;
+  min-width: 100px;
+  left: 50%;
+  border-radius: 3px;
+  display: none;
+}
+
+.dm-node-popup.fixed-top {
+  top: -100%;
+  transform: translate(-50%, -3px);
+}
+
+.dm-node-popup.fixed-bottom {
+  top: 100%;
+  transform: translate(-50%, 3px);
+}
